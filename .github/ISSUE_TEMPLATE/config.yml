@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: A question about Sigillion
+    url: https://github.com/Sigillion-AI/sigillion/discussions
+    about: Ask in Discussions. They are public too, so don't write anything private.
