@@ -1,0 +1,51 @@
+name: Join the Sigillion waitlist
+description: Ask for one of the 500 founder licences. Issues on GitHub are public.
+title: "Waitlist: <your GitHub username>"
+labels: ["waitlist"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This issue is public.** Anyone can read it. Do not write an e-mail address, a phone number, a company secret or anything private. We will contact you through your GitHub profile.
+  - type: input
+    id: github
+    attributes:
+      label: GitHub username
+      placeholder: your-username
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system you use Claude Code on
+      options:
+        - Windows
+        - macOS
+        - Linux
+    validations:
+      required: true
+  - type: dropdown
+    id: usage
+    attributes:
+      label: How do you use Claude Code?
+      options:
+        - Most days
+        - A few days a week
+        - Weekly or less
+        - Not yet, I plan to
+    validations:
+      required: true
+  - type: checkboxes
+    id: results
+    attributes:
+      label: Sharing results (optional)
+      options:
+        - label: I'd paste Sigillion's weekly counts here (numbers only, never my sessions' text).
+          required: false
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Consent
+      options:
+        - label: I understand that everything I write here is public, and I agree to it.
+          required: true
