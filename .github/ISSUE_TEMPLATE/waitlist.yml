@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        **This issue is public.** Anyone can read it. Do not write an e-mail address, a phone number, a company secret or anything private. We will contact you through your GitHub profile.
+        **This issue is public.** Anyone can read it. Do not write an e-mail address, a phone number, a company secret or anything private. At the launch we reply on this issue, so GitHub notifies you. Your licence is sent to you privately, never posted here.
   - type: input
     id: github
     attributes:
@@ -20,7 +20,7 @@ body:
       label: Operating system you use Claude Code on
       options:
         - Windows
-        - macOS
+        - macOS (not at launch)
         - Linux
     validations:
       required: true
