@@ -2,9 +2,24 @@
 
 > **Remember everything. Read almost nothing. Prove all of it.**
 
-Sigillion is a Claude Code plugin from Steddy Nova SRL. It keeps every session word for word on your own computer.
-Claude can search and reopen past sessions after compaction, or after Claude Code deletes its transcripts.
-Every record can be checked to show it was not altered. No telemetry: nothing leaves your computer.
+Sigillion is memory for AI agents, made by Steddy Nova SRL. It keeps the whole record of what an agent and a person did,
+word for word, on your own computer; compressed, so that a model can skim weeks of work in a few hundred tokens and open
+the full text only where it needs it; sealed, so that every record can be checked to show it was not altered. No
+telemetry: nothing leaves your computer.
+
+## One engine, in order
+
+1. **Claude Code first.** Today Sigillion ships as a Claude Code plugin: every session is kept after compaction and after
+   Claude Code deletes its transcripts, and Claude searches and reopens its own history while it works. Claude Code is
+   where every feature is built, measured and proved on real work. It is the first step, not the whole idea.
+2. **Every AI model and agent tool next.** The engine does not depend on one model. The same sealed memory will sit under
+   other models and the tools people already use (coding agents, agent frameworks, assistants), with an SDK for anyone
+   who builds agents.
+3. **Then the fields where the record must stand: legal and finance.** The same store, with a pack for each field: its
+   citations and terms, its redaction rules, and receipts that show what the model did and when, for work a client, a
+   regulator or a court may ask about.
+
+Each step comes after the one before has proved itself with other people's numbers, not before.
 
 ## The launch
 
@@ -21,7 +36,7 @@ Open a new issue and choose "Join the Sigillion waitlist".
 
 Issues are public: do not write e-mail addresses, client names, code or anything private.
 
-Rather not sign up in public? Write to info@yuyai.pro with your GitHub username: you join the same list.
+Rather not sign up in public? Write to info@sigillion.com with your GitHub username: you join the same list.
 
 If you want, tick that you'd share Sigillion's results: once a week you paste the counts Sigillion prints about what it
 did for you (how many answers came from memory, how much of your history they read, and the like). Numbers only,
@@ -39,5 +54,5 @@ If you write to us, we use your address only to answer you and to send your lice
 
 No code here yet. This repository is the list; there is no public install yet.
 
-Questions: [Discussions](https://github.com/Sigillion-AI/sigillion/discussions). Private matters: info@yuyai.pro.
+Questions: [Discussions](https://github.com/Sigillion-AI/sigillion/discussions). Private matters: info@sigillion.com.
 Sigillion is made by Steddy Nova SRL.
