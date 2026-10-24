@@ -5,7 +5,8 @@
 Sigillion is memory for AI agents, made by Steddy Nova SRL. It keeps the whole record of what an agent and a person did,
 word for word, on your own computer; compressed, so that a model can skim weeks of work in a few hundred tokens and open
 the full text only where it needs it; sealed, so that every record can be checked to show it was not altered. No
-telemetry: nothing leaves your computer.
+telemetry: Sigillion itself sends nothing anywhere. What it hands Claude becomes part of your Claude Code session,
+which Claude Code sends to Anthropic as it does the rest.
 
 ## One engine, in order
 
@@ -21,14 +22,47 @@ telemetry: nothing leaves your computer.
 
 Each step comes after the one before has proved itself with other people's numbers, not before.
 
-## The launch
+## Install
 
-- Sigillion is being prepared for release on PyPI, for **Windows and Linux** (macOS later). It will need Claude Code
-  2.1.287 or later and Python 3.10 or later.
-- **The first 500 users get a founder licence:** Pro for one person, free for life.
+Sigillion 0.1.0 is out on PyPI, a few days earlier than the Friday 30 October we had told the waitlist.
+
+You need:
+- Windows or Linux on a 64-bit Intel or AMD processor (x86_64). Not yet: macOS, ARM processors, Alpine Linux.
+- Python 3.10 to 3.14. Python 3.15 needs a C compiler until zstandard, which Sigillion uses, publishes a package for
+  it; with 3.14 installed beside it, `pipx install --include-deps --python 3.14 sigillion` needs none (on Linux with
+  a pipx older than 1.6: `--python python3.14`).
+- Claude Code 2.1.287 or later. To update it: `claude update`; installed with WinGet:
+  `winget upgrade Anthropic.ClaudeCode`.
+- pipx, then a new terminal:
+  - Windows: `py -m pip install --user pipx`, then `py -m pipx ensurepath`.
+  - Ubuntu 23.04 or later, Debian 12 or later: `sudo apt install pipx`, then `pipx ensurepath`.
+  - Other Linux: `python3 -m pip install --user pipx`, then `python3 -m pipx ensurepath`.
+  - Anything else: [pipx's installation page](https://pipx.pypa.io/stable/installation/).
+
+Then two commands:
+
+    pipx install --include-deps sigillion
+    sigillion install
+
+`sigillion status` shows what is kept; `sigillion --help` lists every command. To take it out: `sigillion uninstall`,
+then `pipx uninstall sigillion`; what was kept stays in `~/.sigillion` until you delete it.
+
+- Recording is free for good; reading sessions back needs a licence after a 30-day trial; exporting everything kept
+  always works, with or without one.
 - How it ships: the engine compiled; the storage format and the capture (what touches your transcripts) as readable
   source. Sigillion is not open source: all rights are reserved by Steddy Nova SRL.
-- Recording is free for good; reading sessions back needs a licence after a 30-day trial.
+- Search by meaning is being worked on: today recall finds words, a prefix or a handle. This page says so as soon as
+  it lands.
+- Privacy: [PRIVACY.md](PRIVACY.md).
+
+## Founder licences
+
+- **The first 500 people on the waitlist get a founder licence:** Pro for one person, free for life, in the order
+  people joined (spam and duplicates removed).
+- Licences are sent within your 30-day trial, privately, never in an issue: no key is needed to start. If you joined
+  through an issue, we reply there and ask you to write to info@sigillion.com with your GitHub username, so the
+  licence can go to you privately.
+- To hear about new releases: Watch this repository > Custom > Releases.
 
 ## Join the waitlist
 
@@ -39,20 +73,14 @@ Issues are public: do not write e-mail addresses, client names, code or anything
 Rather not sign up in public? Write to info@sigillion.com with your GitHub username: you join the same list.
 
 If you want, tick that you'd share Sigillion's results: once a week you paste the counts Sigillion prints about what it
-did for you (how many answers came from memory, how much of your history they read, and the like). Numbers only,
-never the text of your sessions, and only what you choose to paste. It helps us show what Sigillion does.
-
-## At the launch
-
-- The one-command install comes with the release, for Windows and Linux. The waitlist gets it first.
-- The 500 founder licences go to the list in the order people joined (spam and duplicates removed).
-- We reply on your issue, so GitHub notifies you; if you wrote to us, we answer by e-mail.
-- Your licence is sent to you privately, never posted in an issue.
-- To hear about the release too: Watch this repository > Custom > Releases.
+did for you (`sigillion status --actions`: how many answers came from memory, how much of your history they read, and
+the like). Numbers only, never the text of your sessions, and only what you choose to paste. It helps us show what
+Sigillion does.
 
 If you write to us, we use your address only to answer you and to send your licence, and delete it when you ask.
 
-No code here yet. This repository is the list; there is no public install yet.
+The code is not in this repository: the packages are on PyPI (sigillion, sigillion-capture, sigillion-format). This
+repository holds the waitlist, the releases and the privacy note.
 
 Questions: [Discussions](https://github.com/Sigillion-AI/sigillion/discussions). Private matters: info@sigillion.com.
 Sigillion is made by Steddy Nova SRL.
