@@ -5,9 +5,9 @@
 [![PyPI](https://img.shields.io/pypi/v/sigillion?label=PyPI&color=3f6b5e)](https://pypi.org/project/sigillion/)
 ![Python 3.10 to 3.14](https://img.shields.io/badge/Python-3.10%20to%203.14-23262b)
 ![Windows and Linux](https://img.shields.io/badge/Windows%20%7C%20Linux-x86__64-23262b)
-[![Website](https://img.shields.io/badge/sigillion.com-website-7f5520)](https://sigillion.com)
+[![Website](https://img.shields.io/badge/website-sigillion--ai.github.io-7f5520)](https://sigillion-ai.github.io/sigillion/)
 
-[Website](https://sigillion.com) | [PyPI](https://pypi.org/project/sigillion/) | [Releases](https://github.com/Sigillion-AI/sigillion/releases) | [Changelog](CHANGELOG.md) | [Privacy](PRIVACY.md) | [Terms](LICENSE) | [Security](SECURITY.md) | [For agents](AGENTS.md)
+[Website](https://sigillion-ai.github.io/sigillion/) | [PyPI](https://pypi.org/project/sigillion/) | [Releases](https://github.com/Sigillion-AI/sigillion/releases) | [Changelog](CHANGELOG.md) | [Privacy](PRIVACY.md) | [Terms](LICENSE) | [Security](SECURITY.md) | [For agents](AGENTS.md)
 
 Sigillion is memory for AI agents, made by Steddy Nova SRL. It keeps the whole record of what an agent and a person did,
 word for word, on your own computer; compressed, so that a model can skim weeks of work in a few hundred tokens and open
@@ -89,7 +89,7 @@ If you write to us, we use your address only to answer you and to send your lice
 
 The code is not in this repository: the packages are on PyPI (sigillion, sigillion-capture, sigillion-format). This
 repository holds the waitlist, the releases, the privacy note, the terms and the website (`docs/`,
-served at sigillion.com).
+served at https://sigillion-ai.github.io/sigillion/ until sigillion.com points here).
 
 Questions: [Discussions](https://github.com/Sigillion-AI/sigillion/discussions). Private matters: info@sigillion.com.
 Sigillion is made by Steddy Nova SRL.

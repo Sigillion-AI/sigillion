@@ -28,4 +28,4 @@ Disallow: /
 User-agent: Applebot-Extended
 Disallow: /
 
-Sitemap: https://sigillion.com/sitemap.xml
+Sitemap: https://sigillion-ai.github.io/sigillion/sitemap.xml
