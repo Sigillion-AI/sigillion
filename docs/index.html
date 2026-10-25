@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sigillion: lossless, provable memory for Claude Code</title>
+<meta name="description" content="Sigillion keeps every Claude Code session on your own computer, word for word, compressed and sealed so that a change shows: after compaction, after the 30-day transcript deletion. Claude Code first, every agent next, then legal and finance.">
+<link rel="canonical" href="https://sigillion.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sigillion">
+<meta property="og:title" content="Sigillion: lossless, provable memory for Claude Code">
+<meta property="og:description" content="Every Claude Code session kept on your own computer, word for word, compressed and sealed so that a change shows. Claude Code first, every agent next, then legal and finance.">
+<meta property="og:url" content="https://sigillion.com/">
+<meta property="og:image" content="https://sigillion.com/sigillion-card.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sigillion: lossless, provable memory for Claude Code">
+<meta name="twitter:description" content="Every Claude Code session kept on your own computer, word for word, compressed and sealed so that a change shows.">
+<meta name="twitter:image" content="https://sigillion.com/sigillion-card.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%2323262b'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%23d4a947'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://sigillion.com/#organization",
+      "name": "Sigillion",
+      "legalName": "Steddy Nova SRL",
+      "url": "https://sigillion.com/",
+      "email": "info@sigillion.com",
+      "address": {"@type": "PostalAddress", "addressLocality": "Brasov", "addressCountry": "RO"},
+      "sameAs": ["https://github.com/Sigillion-AI/sigillion", "https://pypi.org/project/sigillion/"]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Sigillion",
+      "url": "https://sigillion.com/",
+      "description": "Lossless, local, provable memory for AI agents. A Claude Code plugin that keeps every session on the user's own computer, word for word, compressed and sealed in hash-chained segments, with a brief at each session's start and recall of any earlier turn, each answer with a receipt.",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Windows, Linux",
+      "softwareVersion": "0.1.0",
+      "datePublished": "2026-10-24",
+      "downloadUrl": "https://pypi.org/project/sigillion/",
+      "softwareHelp": "https://github.com/Sigillion-AI/sigillion",
+      "author": {"@id": "https://sigillion.com/#organization"}
+    }
+  ]
+}
+</script>
+<style>
+  :root {
+    --bg: #fbf8f1; --bg2: #f6f1e7; --ink: #23262b; --ink2: #4a4f57; --mute: #6b6f76;
+    --line: #e2daca; --gold: #d4a947; --brown: #7f5520; --green: #3f6b5e; --dark: #2c3036;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #23262b; --bg2: #2c3036; --ink: #f3eee3; --ink2: #e2daca; --mute: #c9c4b8; --line: #3f444b;
+            --brown: #d4a947; --green: #8fbfae; --dark: #1a1c20; }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 'IBM Plex Sans', Arial, sans-serif; }
+  main, header, footer { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+  header { padding-top: 56px; }
+  .brand { display: flex; align-items: baseline; gap: 14px; }
+  .mark { width: 40px; height: 40px; border-radius: 8px; background: var(--dark); color: var(--gold);
+          font: 600 26px/40px 'Source Serif 4', Georgia, serif; text-align: center; flex: none; align-self: center; }
+  h1 { font: 600 44px/1.1 'Source Serif 4', Georgia, serif; margin: 0; letter-spacing: -0.01em; }
+  .tagline { font: 400 26px/1.3 'Source Serif 4', Georgia, serif; color: var(--brown); margin: 22px 0 0; }
+  .lead { font-size: 19px; margin-top: 22px; color: var(--ink2); }
+  h2 { font: 600 26px/1.2 'Source Serif 4', Georgia, serif; margin: 52px 0 14px; padding-top: 22px;
+       border-top: 1px solid var(--line); }
+  p { margin: 0 0 14px; }
+  ol, ul { padding-left: 22px; margin: 0 0 14px; }
+  li { margin-bottom: 10px; }
+  li b { color: var(--ink); }
+  pre { background: var(--dark); color: #f3eee3; padding: 18px 20px; border-radius: 8px; overflow-x: auto;
+        font: 15px/1.55 ui-monospace, Consolas, Menlo, monospace; margin: 0 0 14px; }
+  code { font: 15px/1 ui-monospace, Consolas, Menlo, monospace; background: var(--bg2); padding: 2px 6px;
+         border-radius: 4px; }
+  pre code { background: none; padding: 0; font-size: inherit; }
+  a { color: var(--brown); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin: 22px 0 0; }
+  .fact { background: var(--bg2); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; }
+  .fact b { display: block; font: 600 22px/1.2 'Source Serif 4', Georgia, serif; color: var(--ink); }
+  .fact span { color: var(--mute); font-size: 15px; }
+  .note { color: var(--mute); font-size: 15px; }
+  .cta { display: inline-block; background: var(--green); color: #fbf8f1; padding: 10px 18px; border-radius: 6px;
+         text-decoration: none; font-weight: 500; margin: 6px 10px 6px 0; }
+  .cta.alt { background: transparent; color: var(--ink); border: 1px solid var(--ink2); }
+  footer { margin-top: 64px; padding-top: 22px; padding-bottom: 48px; border-top: 1px solid var(--line);
+           color: var(--mute); font-size: 15px; }
+  footer nav a { margin-right: 14px; }
+  @media (max-width: 480px) { h1 { font-size: 36px; } .tagline { font-size: 22px; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><div class="mark">S</div><h1>Sigillion</h1></div>
+  <p class="tagline">Remember everything. Read almost nothing. Prove all of it.</p>
+  <p class="lead">Sigillion is memory for AI agents, made by Steddy Nova SRL. It keeps the whole record of what an agent
+  and a person did, word for word, on your own computer; compressed, so that a model can skim weeks of work in a few
+  hundred tokens and open the full text only where it needs it; sealed, so that every record can be checked to show
+  it was not altered. No telemetry: Sigillion itself sends nothing anywhere.</p>
+  <div class="facts">
+    <div class="fact"><b>0.1.0</b><span>on PyPI since 24 October 2026</span></div>
+    <div class="fact"><b>Local</b><span>your computer, nothing sent</span></div>
+    <div class="fact"><b>Sealed</b><span>a change shows</span></div>
+    <div class="fact"><b>Free to record</b><span>reading: 30-day trial, then a licence</span></div>
+  </div>
+</header>
+
+<main>
+  <h2>One engine, in order</h2>
+  <ol>
+    <li><b>Claude Code first.</b> Today Sigillion ships as a Claude Code plugin: every session is kept after compaction
+      and after Claude Code deletes its transcripts, and Claude searches and reopens its own history while it works.
+      Claude Code is where every feature is built, measured and proved on real work. It is the first step, not the
+      whole idea.</li>
+    <li><b>Every AI model and agent tool next.</b> The engine does not depend on one model. The same sealed memory will
+      sit under other models and the tools people already use (coding agents, agent frameworks, assistants), with an
+      SDK for anyone who builds agents.</li>
+    <li><b>Then the fields where the record must stand: legal and finance.</b> The same store, with a pack for each
+      field: its citations and terms, its redaction rules, and receipts that show what the model did and when, for
+      work a client, a regulator or a court may ask about.</li>
+  </ol>
+  <p>Each step comes after the one before has proved itself with other people's numbers, not before.</p>
+
+  <h2>Install</h2>
+  <p>Windows or Linux on a 64-bit Intel or AMD processor (x86_64); Python 3.10 to 3.14; Claude Code 2.1.287 or later;
+  pipx. Not yet: macOS, ARM processors, Alpine Linux. The details, Python 3.15 included, are in the
+  <a href="https://github.com/Sigillion-AI/sigillion#install">README</a>.</p>
+<pre><code>pipx install --include-deps sigillion
+sigillion install</code></pre>
+  <p><code>sigillion status</code> shows what is kept; <code>sigillion status --actions</code> shows what Sigillion did
+  for you, in four lines of counts you can share as they are; <code>sigillion --help</code> lists every command. To take
+  it out: <code>sigillion uninstall</code>, then <code>pipx uninstall sigillion</code>; what was kept stays in
+  <code>~/.sigillion</code> until you delete it.</p>
+  <ul>
+    <li>Recording is free for good; reading sessions back needs a licence after a 30-day trial; exporting everything
+      kept always works, with or without one.</li>
+    <li>How it ships: the engine compiled; the storage format and the capture (what touches your transcripts) as
+      readable source. Sigillion is not open source: all rights are reserved by Steddy Nova SRL. The
+      <a href="https://github.com/Sigillion-AI/sigillion/blob/main/LICENSE">terms</a>.</li>
+    <li>Search by meaning is being worked on: today recall finds words, a prefix or a handle.</li>
+  </ul>
+
+  <h2>Founder licences</h2>
+  <p><b>The first 500 people on the waitlist get a founder licence:</b> Pro for one person, free for life, in the order
+  people joined (spam and duplicates removed). Licences are sent within your 30-day trial, privately, never in an
+  issue: no key is needed to start.</p>
+  <p>
+    <a class="cta" href="https://github.com/Sigillion-AI/sigillion/issues/new/choose">Join the waitlist</a>
+    <a class="cta alt" href="https://pypi.org/project/sigillion/">Sigillion on PyPI</a>
+  </p>
+  <p class="note">Issues on GitHub are public: do not write e-mail addresses, client names, code or anything private.
+  Rather not sign up in public? Write to <a href="mailto:info@sigillion.com">info@sigillion.com</a> with your GitHub
+  username: you join the same list.</p>
+
+  <h2>Privacy</h2>
+  <p>Sigillion runs on your computer and sends nothing to us or to anyone: no account, no telemetry, no update check,
+  and its licence is checked offline. What it hands Claude becomes part of your Claude Code session, which Claude Code
+  sends to Anthropic as it does the rest. The whole note:
+  <a href="https://github.com/Sigillion-AI/sigillion/blob/main/PRIVACY.md">PRIVACY.md</a>. Security reports:
+  <a href="https://github.com/Sigillion-AI/sigillion/blob/main/SECURITY.md">SECURITY.md</a>, by e-mail, never in an
+  issue.</p>
+</main>
+
+<footer>
+  <nav>
+    <a href="https://github.com/Sigillion-AI/sigillion">GitHub</a>
+    <a href="https://pypi.org/project/sigillion/">PyPI</a>
+    <a href="https://github.com/Sigillion-AI/sigillion/releases">Releases</a>
+    <a href="https://github.com/Sigillion-AI/sigillion/blob/main/CHANGELOG.md">Changelog</a>
+    <a href="https://github.com/Sigillion-AI/sigillion/discussions">Discussions</a>
+    <a href="https://github.com/Sigillion-AI/sigillion/blob/main/PRIVACY.md">Privacy</a>
+    <a href="https://github.com/Sigillion-AI/sigillion/blob/main/LICENSE">Terms</a>
+  </nav>
+  <p>Sigillion is made by Steddy Nova SRL, Brasov, Romania. Questions:
+  <a href="https://github.com/Sigillion-AI/sigillion/discussions">Discussions</a>. Private matters:
+  <a href="mailto:info@sigillion.com">info@sigillion.com</a>.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,72 @@
+Sigillion licence terms
+
+Version 1, 24 October 2026. Steddy Nova SRL, Brasov, Romania (trade register J2025042808005, CUI
+51973580; contact info@sigillion.com) ("we", "us").
+
+These terms cover Sigillion: the packages sigillion, sigillion-capture and sigillion-format, and everything in them
+("the software"). By installing or using the software you accept them. If you use it for an organisation, you accept
+them for it and confirm that you may.
+
+1. What you may do
+- Install and use the software on computers you own or control, for yourself or for your organisation's own work.
+- Capture, which records your sessions into your store, is free, with no time limit.
+- Reading back what was kept (the brief, search, recall and the other reading commands) is free for 30 days from your
+  first use: the trial. After it, reading needs a licence: a founder licence, or a paid plan (the plans and their
+  prices: https://github.com/Sigillion-AI/sigillion).
+- Export, at any time, with or without a licence, and after these terms end: sigillion-reader, in the sigillion-format
+  package, lists, verifies and extracts everything kept. Your data is never held back from you.
+- Read the source of sigillion-format and sigillion-capture, which ship as readable source so that you can see what
+  touches your transcripts.
+
+2. What you may not do
+- Copy, share, sell, rent or publish the software or a licence, or run the software for others as a service, except
+  as these terms allow.
+- Change the software, or get around its licence check or its trial.
+- Take apart, decompile or reverse engineer the compiled engine, except where the law allows it and a contract cannot
+  forbid it (in the European Union, Articles 5 and 6 of Directive 2009/24/EC).
+- Remove these terms or our notices from the software.
+The source of sigillion-format and sigillion-capture is readable, not open source: reading it gives no right to use
+it except as part of the software, under these terms.
+
+3. Licences
+- A licence is a line of text we sign, naming its holder, its plan and when it ends, if it does. It is checked on
+  your computer, offline. Keep it private: anyone who holds it could use it.
+- A founder licence: the Pro plan for one person, with no end date, in every version we publish. It does not cover
+  services we run on our own servers for you (such as sync or team memory), which come with plans of their own.
+- Team and enterprise plans: for the number of people (seats) the licence names.
+- A licence can't be passed to someone else without our written agreement.
+
+4. Your data
+- What Sigillion stores stays on your computer and is yours. We receive no copy of it and claim no right to it. How
+  Sigillion handles it: the privacy note, https://github.com/Sigillion-AI/sigillion/blob/main/PRIVACY.md
+
+5. Updates and support
+- We may publish new versions; you choose whether and when to install them. Support: info@sigillion.com.
+
+6. No warranty
+- The software is provided as it is. As far as the law allows, we give no warranty that it is free of errors or fit
+  for a particular purpose. Its redaction replaces secrets it recognises by their shape, and can miss others.
+- If you are a consumer, nothing in these terms limits the rights the law of your country gives you, including the
+  legal guarantee for digital content you pay for.
+
+7. Liability
+- As far as the law allows, we are not liable for indirect or consequential loss, or for lost profit, and our whole
+  liability is limited to what you paid us for the software in the 12 months before the claim, or EUR 100 if that
+  is more.
+- Nothing in these terms limits liability for intent or gross negligence, for death or personal injury, or anything
+  else the law does not let us limit.
+
+8. When these terms end
+- They end at once if you break them; then you stop using the software. Exporting your data stays open to you
+  (section 1).
+- You may stop at any time: `sigillion uninstall`, then `pipx uninstall sigillion`. What was kept stays on your
+  computer until you delete it.
+
+9. Law and courts
+- Romanian law applies, and the courts of Brasov, Romania. If you are a consumer in the European Union, you keep the
+  protection of the mandatory law of the country where you live, and may also go to its courts.
+
+10. Changes
+- We may change these terms for later versions; each version comes with the terms that apply to it.
+
+Contact: Steddy Nova SRL, info@sigillion.com

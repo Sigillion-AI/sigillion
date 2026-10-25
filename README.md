@@ -2,6 +2,13 @@
 
 > **Remember everything. Read almost nothing. Prove all of it.**
 
+[![PyPI](https://img.shields.io/pypi/v/sigillion?label=PyPI&color=3f6b5e)](https://pypi.org/project/sigillion/)
+![Python 3.10 to 3.14](https://img.shields.io/badge/Python-3.10%20to%203.14-23262b)
+![Windows and Linux](https://img.shields.io/badge/Windows%20%7C%20Linux-x86__64-23262b)
+[![Website](https://img.shields.io/badge/sigillion.com-website-7f5520)](https://sigillion.com)
+
+[Website](https://sigillion.com) | [PyPI](https://pypi.org/project/sigillion/) | [Releases](https://github.com/Sigillion-AI/sigillion/releases) | [Changelog](CHANGELOG.md) | [Privacy](PRIVACY.md) | [Terms](LICENSE) | [Security](SECURITY.md) | [For agents](AGENTS.md)
+
 Sigillion is memory for AI agents, made by Steddy Nova SRL. It keeps the whole record of what an agent and a person did,
 word for word, on your own computer; compressed, so that a model can skim weeks of work in a few hundred tokens and open
 the full text only where it needs it; sealed, so that every record can be checked to show it was not altered. No
@@ -53,7 +60,8 @@ then `pipx uninstall sigillion`; what was kept stays in `~/.sigillion` until you
   source. Sigillion is not open source: all rights are reserved by Steddy Nova SRL.
 - Search by meaning is being worked on: today recall finds words, a prefix or a handle. This page says so as soon as
   it lands.
-- Privacy: [PRIVACY.md](PRIVACY.md).
+- Privacy: [PRIVACY.md](PRIVACY.md). The terms: [LICENSE](LICENSE). Security reports: [SECURITY.md](SECURITY.md),
+  by e-mail, never in an issue.
 
 ## Founder licences
 
@@ -80,7 +88,8 @@ Sigillion does.
 If you write to us, we use your address only to answer you and to send your licence, and delete it when you ask.
 
 The code is not in this repository: the packages are on PyPI (sigillion, sigillion-capture, sigillion-format). This
-repository holds the waitlist, the releases and the privacy note.
+repository holds the waitlist, the releases, the privacy note, the terms and the website (`docs/`,
+served at sigillion.com).
 
 Questions: [Discussions](https://github.com/Sigillion-AI/sigillion/discussions). Private matters: info@sigillion.com.
 Sigillion is made by Steddy Nova SRL.
