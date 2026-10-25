@@ -4,8 +4,9 @@ Sigillion is lossless, local, provable memory for AI agents, made by Steddy Nova
 plugin: it keeps every Claude Code session on the user's own computer, word for word, compressed and sealed in
 hash-chained segments so that a change shows, after compaction and after Claude Code deletes its transcripts. Each new
 session starts with a brief of where the work stands, and Claude recalls earlier turns through MCP tools (recall,
-expand, timeline, fixes, history), each answer with a receipt of what was read. Nothing leaves the computer: no
-telemetry, no account, the licence checked offline.
+expand, timeline, fixes, history), each answer with a receipt of what was read. Sigillion itself sends nothing
+anywhere: no telemetry, no account, the licence checked offline. What it hands Claude (the brief, the recalled
+turns) becomes part of the Claude Code session, which Claude Code sends to Anthropic as it does the rest.
 
 The code is not here. The packages are on PyPI: `sigillion` (the engine, compiled), `sigillion-capture` and
 `sigillion-format` (readable source). This repository holds the README, the waitlist (issues), the releases, the

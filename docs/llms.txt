@@ -2,13 +2,13 @@
 
 > Lossless, local, provable memory for AI agents. Today a Claude Code plugin that keeps every session on the user's own computer, word for word, compressed and sealed in hash-chained segments so that a change shows, after compaction and after Claude Code deletes its transcripts; a brief at each session's start; recall of any earlier turn, each answer with a receipt. Claude Code first, every agent next, then legal and finance. Made by Steddy Nova SRL.
 
-Sigillion is not open source. The packages are on PyPI: sigillion (the engine, compiled), sigillion-capture and sigillion-format (readable source). Install, on Windows or Linux x86_64 with Python 3.10 to 3.14 and Claude Code 2.1.287 or later: `pipx install --include-deps sigillion`, then `sigillion install`. Recording is free for good; reading back needs a licence after a 30-day trial; export always works. Nothing leaves the computer.
+Sigillion is not open source. The packages are on PyPI: sigillion (the engine, compiled), sigillion-capture and sigillion-format (readable source). Install, on Windows or Linux x86_64 with Python 3.10 to 3.14 and Claude Code 2.1.287 or later: `pipx install --include-deps sigillion`, then `sigillion install`. Recording is free for good; reading back needs a licence after a 30-day trial; export always works. Sigillion itself sends nothing anywhere; what it hands Claude becomes part of the Claude Code session, which Claude Code sends to Anthropic.
 
 ## Docs
 
 - [README](https://github.com/Sigillion-AI/sigillion/blob/main/README.md): what it is, the requirements, the install, the founder licences, the waitlist
 - [For agents](https://github.com/Sigillion-AI/sigillion/blob/main/AGENTS.md): the short version for an agent helping a user
-- [Privacy note](https://github.com/Sigillion-AI/sigillion/blob/main/PRIVACY.md): what is kept, where, what is sent (nothing)
+- [Privacy note](https://github.com/Sigillion-AI/sigillion/blob/main/PRIVACY.md): what is kept, where, and what reaches Anthropic through Claude Code
 - [Licence terms](https://github.com/Sigillion-AI/sigillion/blob/main/LICENSE)
 - [Security policy](https://github.com/Sigillion-AI/sigillion/blob/main/SECURITY.md)
 - [Changelog](https://github.com/Sigillion-AI/sigillion/blob/main/CHANGELOG.md)
