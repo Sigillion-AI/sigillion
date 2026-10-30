@@ -18,13 +18,13 @@ which Claude Code sends to Anthropic as it does the rest.
 ## One engine, in order
 
 1. **Claude Code first.** Today Sigillion ships as a Claude Code plugin: every session is kept after compaction and after
-   Claude Code deletes its transcripts, and Claude searches and reopens its own history while it works. Claude Code is
+   Claude Code deletes its transcripts. Claude searches and reopens its own history while it works. Claude Code is
    where every feature is built, measured and proved on real work. It is the first step, not the whole idea.
 2. **Every AI model and agent tool next.** The engine does not depend on one model. The same sealed memory will sit under
    other models and the tools people already use (coding agents, agent frameworks, assistants), with an SDK for anyone
    who builds agents.
 3. **Then the fields where the record must stand: legal and finance.** The same store, with a pack for each field: its
-   citations and terms, its redaction rules, and receipts that show what the model did and when, for work a client, a
+   citations and terms, its redaction rules and receipts that show what the model did and when, for work a client, a
    regulator or a court may ask about.
 
 Each step comes after the one before has proved itself with other people's numbers, not before.
@@ -54,22 +54,22 @@ Then two commands:
 `sigillion status` shows what is kept; `sigillion --help` lists every command. To take it out: `sigillion uninstall`,
 then `pipx uninstall sigillion`; what was kept stays in `~/.sigillion` until you delete it.
 
-- Recording is free for good; reading sessions back needs a licence after a 30-day trial; exporting everything kept
-  always works, with or without one.
-- How it ships: the engine compiled; the storage format and the capture (what touches your transcripts) as readable
-  source. Sigillion is not open source: all rights are reserved by Steddy Nova SRL.
 - Search by meaning is being worked on: today recall finds words, a prefix or a handle. This page says so as soon as
   it lands.
 - Privacy: [PRIVACY.md](PRIVACY.md). The terms: [LICENSE](LICENSE). Security reports: [SECURITY.md](SECURITY.md),
   by e-mail, never in an issue.
 
-## Founder licences
+## Free to use
 
-- **The first 500 people on the waitlist get a founder licence:** Pro for one person, free for life, in the order
-  people joined (spam and duplicates removed).
-- Licences are sent within your 30-day trial, privately, never in an issue: no key is needed to start. If you joined
-  through an issue, we reply there and ask you to write to info@sigillion.com with your GitHub username, so the
-  licence can go to you privately.
+- **Sigillion is free to use, for personal, non-commercial use.** Recording, the brief at a session's start, search
+  and recall, receipts and export: all of it, with no licence key to ask for. For commercial use, write to
+  info@sigillion.com.
+- **Not open source and not open core.** There is one Sigillion: closed and free to use. We keep it closed because
+  what comes next is built on engines and methods that are not on the market yet.
+- How it ships: the engine compiled; the storage format and the capture (what touches your transcripts) as readable
+  source, so you can see exactly what happens to your data. All rights are reserved by Steddy Nova SRL: free to use
+  does not mean free to copy, change or resell. The terms: [LICENSE](LICENSE).
+- Already have a founder licence? You will hear from us by e-mail as the project moves forward.
 - To hear about new releases: Watch this repository > Custom > Releases.
 
 ## Join the waitlist
@@ -81,11 +81,12 @@ Issues are public: do not write e-mail addresses, client names, code or anything
 Rather not sign up in public? Write to info@sigillion.com with your GitHub username: you join the same list.
 
 If you want, tick that you'd share Sigillion's results: once a week you paste the counts Sigillion prints about what it
-did for you (`sigillion status --actions`: how many answers came from memory, how much of your history they read, and
-the like). Numbers only, never the text of your sessions, and only what you choose to paste. It helps us show what
+did for you (`sigillion status --actions`: how many answers came from memory, how much of your history they read and
+the like). Numbers only, never the text of your sessions; only what you choose to paste. It helps us show what
 Sigillion does.
 
-If you write to us, we use your address only to answer you and to send your licence, and delete it when you ask.
+If you write to us, we use your address only to answer you and to tell you how the project moves forward. We delete
+it when you ask.
 
 The code is not in this repository: the packages are on PyPI (sigillion, sigillion-capture, sigillion-format). This
 repository holds the waitlist, the releases, the privacy note, the terms and the website (`docs/`,
