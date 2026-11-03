@@ -1,18 +1,17 @@
 Sigillion licence terms
 
-Version 1, 24 October 2026. Steddy Nova SRL, Brasov, Romania (trade register J2025042808005, CUI
+Version 2, 30 October 2026. Steddy Nova SRL, Brasov, Romania (trade register J2025042808005, CUI
 51973580; contact info@sigillion.com) ("we", "us").
 
 These terms cover Sigillion: the packages sigillion, sigillion-capture and sigillion-format, and everything in them
-("the software"). By installing or using the software you accept them. If you use it for an organisation, you accept
-them for it and confirm that you may.
+("the software"). By installing or using the software you accept them.
 
 1. What you may do
-- Install and use the software on computers you own or control, for yourself or for your organisation's own work.
-- Capture, which records your sessions into your store, is free, with no time limit.
-- Reading back what was kept (the brief, search, recall and the other reading commands) is free for 30 days from your
-  first use: the trial. After it, reading needs a licence: a founder licence, or a paid plan (the plans and their
-  prices: https://github.com/Sigillion-AI/sigillion).
+- Install and use the software on computers you own or control, for your own personal, non-commercial use, free of
+  charge and with no time limit: every feature, capture and reading back what was kept (the brief, search, recall and
+  the other reading commands) alike. No licence is needed.
+- Any other use, such as use for or within a business or another organisation, or for work you are paid for, needs
+  our written permission first: info@sigillion.com.
 - Export, at any time, with or without a licence, and after these terms end: sigillion-reader, in the sigillion-format
   package, lists, verifies and extracts everything kept. Your data is never held back from you.
 - Read the source of sigillion-format and sigillion-capture, which ship as readable source so that you can see what
@@ -21,7 +20,7 @@ them for it and confirm that you may.
 2. What you may not do
 - Copy, share, sell, rent or publish the software or a licence, or run the software for others as a service, except
   as these terms allow.
-- Change the software, or get around its licence check or its trial.
+- Change the software, or get around its licence check.
 - Take apart, decompile or reverse engineer the compiled engine, except where the law allows it and a contract cannot
   forbid it (in the European Union, Articles 5 and 6 of Directive 2009/24/EC).
 - Remove these terms or our notices from the software.
@@ -29,11 +28,8 @@ The source of sigillion-format and sigillion-capture is readable, not open sourc
 it except as part of the software, under these terms.
 
 3. Licences
-- A licence is a line of text we sign, naming its holder, its plan and when it ends, if it does. It is checked on
-  your computer, offline. Keep it private: anyone who holds it could use it.
-- A founder licence: the Pro plan for one person, with no end date, in every version we publish. It does not cover
-  services we run on our own servers for you (such as sync or team memory), which come with plans of their own.
-- Team and enterprise plans: for the number of people (seats) the licence names.
+- The software needs no licence. A licence we issued before (a founder licence) stays valid and is shown by
+  `sigillion status`: a line of text we sign, naming its holder, checked on your computer, offline. Keep it private.
 - A licence can't be passed to someone else without our written agreement.
 
 4. Your data
