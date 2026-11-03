@@ -1,16 +1,22 @@
 # Sigillion privacy note
 
-24 October 2026. Steddy Nova SRL, Brasov, Romania (trade register J2025042808005, CUI 51973580). Contact:
+3 November 2026. Steddy Nova SRL, Brasov, Romania (trade register J2025042808005, CUI 51973580). Contact:
 info@sigillion.com.
 
 In short: Sigillion runs on your computer and sends nothing to us or to anyone. No account, no telemetry, no update
-check, and its licence is checked offline.
+check and no licence needed.
 
 ## 1. What Sigillion keeps, and where
 
 - Your Claude Code sessions: what you typed, what Claude answered, the tools it ran and what they returned, and its
   subagents, from the moment you install it; and, when you install it, the history Claude Code still holds (its last
   30 days).
+- Your Cursor chats, when you install it in Cursor: what you typed, what the agent answered and thought, the tools it
+  ran and what they returned, the files it changed (as they were before and after each edit) and the long outputs it
+  saved to files. Sigillion reads them from Cursor's own database and folder and never changes them. What Cursor's
+  database holds of a chat is kept as it is there, an image in the chat too, once the secrets are replaced. An image
+  or a PDF among the saved outputs is kept as a pointer to its hash. When you install it, it also brings in every chat
+  Cursor still holds. Cursor's terminal logs are not kept.
 - Secrets (API keys, tokens, passwords, private keys) are replaced by a placeholder before anything is stored. The
   rules find secrets by their known shapes: a secret in a shape they don't know is kept as it is.
 - Images and PDFs Claude looked at are not stored: only their size, type, path and a hash.
@@ -24,22 +30,24 @@ check, and its licence is checked offline.
 - To delete everything: `sigillion uninstall`, then delete the folder ~/.sigillion (and the folder SIGILLION_STORE
   names, if you set it). There is nothing to ask us.
 
-## 2. What reaches Anthropic, through Claude Code
+## 2. What reaches your agent's model
 
 - Sigillion gives Claude a short brief when a session starts and after a compaction; the turns Claude recalls when it
   asks; and, when Claude is about to write a script an earlier session already wrote, a note naming that script (its
   name, when it was written, its first line and where it is). These become part of your Claude Code conversation,
   which Claude Code sends to Anthropic as it does the rest of the conversation, under Anthropic's terms and your
   Claude Code settings. Sigillion itself connects to nothing outside your computer.
+- In Cursor, the brief and the recalled turns become part of your Cursor chat, which Cursor sends to the models it
+  uses, under Cursor's terms and your Cursor settings.
 
-## 3. The trial and your licence
+## 3. No licence needed; the founder licences
 
-- The trial is counted on your computer: a small file holds the time of your first and last use. Nothing is sent.
-- A licence names its holder (a name and an e-mail address), and is checked on your computer, offline. We keep a
-  record of each licence we issue (its holder, plan and dates) to issue it, to answer you about it, and to count the
+- Sigillion needs no licence and counts no trial.
+- A founder licence names its holder (a name and an e-mail address) and is checked on your computer, offline. We keep
+  a record of each licence we issue (its holder, plan and dates) to issue it, to answer you about it and to count the
   500 founder licences; the legal basis is our agreement with you (GDPR Article 6(1)(b)). We keep it for as long as
-  the licence can be used, and an invoice for as long as Romanian accounting law requires; anything else is deleted
-  when you ask, and deleting it never stops your licence working. We never sell or share it.
+  the licence can be used. Anything else is deleted when you ask. Deleting it never stops your licence working. We
+  never sell or share it.
 
 ## 4. When you join the waitlist or write to us
 
@@ -48,11 +56,10 @@ check, and its licence is checked offline.
   info@sigillion.com. We use your name, e-mail address and GitHub username only to tell you about the release and to
   send your licence, and delete them when you ask. The legal basis is your request to join (GDPR Article 6(1)(b),
   steps you asked for before an agreement). We keep them until your founder licence is sent, then only the licence's
-  record (section 3); if no licence is sent, we delete them 12 months after the release, or sooner when you ask.
-- Founder licences are sent after the release, within your 30-day trial, privately, to the e-mail address you gave
-  us. If you joined through a GitHub issue, we ask you for an address first: a licence is never posted in an issue.
-  When licences are delivered through a service of ours, this note will say which, and what it receives.
-- Paid plans are not on sale yet. Before they are, this note will say how payment works and who processes it.
+  record (section 3). We delete them when you ask.
+- Founder licences are sent privately, to the e-mail address you gave us. If you joined through a GitHub issue, we
+  ask you for an address first: a licence is never posted in an issue. When licences are delivered through a service
+  of ours, this note will name it and say what it receives.
 
 ## 5. Counts you share
 
