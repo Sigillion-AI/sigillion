@@ -4,7 +4,7 @@
 
 [![PyPI](https://img.shields.io/pypi/v/sigillion?label=PyPI&color=3f6b5e)](https://pypi.org/project/sigillion/)
 ![Python 3.10 to 3.14](https://img.shields.io/badge/Python-3.10%20to%203.14-23262b)
-![Windows and Linux](https://img.shields.io/badge/Windows%20%7C%20Linux-x86__64-23262b)
+![Windows, Linux and macOS](https://img.shields.io/badge/Windows%20%7C%20Linux%20%7C%20macOS-x86__64%20%7C%20Apple%20silicon-23262b)
 [![Website](https://img.shields.io/badge/sigillion.com-website-7f5520)](https://sigillion.com)
 
 [Website](https://sigillion.com) | [PyPI](https://pypi.org/project/sigillion/) | [Releases](https://github.com/Sigillion-AI/sigillion/releases) | [Changelog](CHANGELOG.md) | [Privacy](PRIVACY.md) | [Terms](LICENSE) | [Security](SECURITY.md) | [For agents](AGENTS.md)
@@ -33,20 +33,22 @@ Each step comes after the one before has proved itself with other people's numbe
 
 ## Install
 
-Sigillion 0.1.1 is on PyPI. It adds Cursor.
+Sigillion 0.1.2 is on PyPI. It adds the Mac with Apple silicon. 0.1.1 added Cursor.
 
 You need:
-- Windows or Linux on a 64-bit Intel or AMD processor (x86_64). Not yet: macOS, ARM processors, Alpine Linux.
+- Windows or Linux on a 64-bit Intel or AMD processor (x86_64); or a Mac with Apple silicon (M1 or later) and macOS 11
+  or later. Not yet: a Mac with an Intel processor, Windows on ARM, ARM Linux, Alpine Linux.
 - Python 3.10 to 3.14. Python 3.15 needs a C compiler until zstandard, which Sigillion uses, publishes a package for
   it; with 3.14 installed beside it, `pipx install --include-deps --python 3.14 sigillion` needs none (on Linux with
   a pipx older than 1.6: `--python python3.14`).
 - Claude Code 2.1.287 or later. To update it: `claude update`; installed with WinGet:
-  `winget upgrade Anthropic.ClaudeCode`.
+  `winget upgrade Anthropic.ClaudeCode`; installed with Homebrew: `brew upgrade claude-code`.
 - Or Cursor (measured on Cursor 3.27 on Windows).
 - pipx, then a new terminal:
   - Windows: `py -m pip install --user pipx`, then `py -m pipx ensurepath`.
   - Ubuntu 23.04 or later, Debian 12 or later: `sudo apt install pipx`, then `pipx ensurepath`.
   - Other Linux: `python3 -m pip install --user pipx`, then `python3 -m pipx ensurepath`.
+  - macOS: `brew install pipx`, then `pipx ensurepath`.
   - Anything else: [pipx's installation page](https://pipx.pypa.io/stable/installation/).
 
 Then the commands:
@@ -58,10 +60,10 @@ Then the commands:
 `sigillion install` is for Claude Code and `sigillion install cursor` for Cursor. Use one of them or both. After
 `sigillion install cursor`, restart Cursor once.
 
-To upgrade from 0.1.0: close every Claude Code session and every Cursor window first. Then run
+To upgrade from 0.1.0 or 0.1.1: close every Claude Code session and every Cursor window first. Then run
 `pipx install --include-deps --force sigillion`, then `sigillion install` again (and `sigillion install cursor` if you
-use Cursor). 0.1.0 stops reading your memory back 30 days after its first use; 0.1.1 has no trial and reads everything
-you kept.
+use Cursor). 0.1.0 stops reading your memory back 30 days after its first use; 0.1.1 and later have no trial and read
+everything you kept.
 
 `sigillion status` shows what is kept; `sigillion --help` lists every command. To take it out: `sigillion uninstall`
 (in Cursor: `sigillion uninstall cursor`), then `pipx uninstall sigillion`; what was kept stays in `~/.sigillion` until
