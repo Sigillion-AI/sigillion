@@ -33,7 +33,8 @@ Each step comes after the one before has proved itself with other people's numbe
 
 ## Install
 
-Sigillion 0.1.2 is on PyPI. It adds the Mac with Apple silicon. 0.1.1 added Cursor.
+Sigillion 0.1.2 is on PyPI. It adds the Mac with Apple silicon. 0.1.1 added Cursor and took the trial out. What each
+release changed: [CHANGELOG.md](CHANGELOG.md).
 
 You need:
 - Windows or Linux on a 64-bit Intel or AMD processor (x86_64); or a Mac with Apple silicon (M1 or later) and macOS 11

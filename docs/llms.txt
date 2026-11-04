@@ -1,17 +1,17 @@
 # Sigillion
 
-> Lossless, local, provable memory for AI agents. Today a Claude Code plugin that keeps every session on the user's own computer, word for word, compressed and sealed in hash-chained segments so that a change shows, after compaction and after Claude Code deletes its transcripts; a brief at each session's start; recall of any earlier turn, each answer with a receipt. Claude Code first, every agent next, then legal and finance. Made by Steddy Nova SRL.
+> Lossless, local, provable memory for AI agents. Today it works in Claude Code and in Cursor: it keeps every Claude Code session and every Cursor chat on the user's own computer, word for word, compressed and sealed in hash-chained segments so that a change shows, after compaction and after Claude Code deletes its transcripts; one store for both agents; a brief at each session's start; recall of any earlier turn, each answer with a receipt. Claude Code and Cursor first, every agent next, then legal and finance. Made by Steddy Nova SRL.
 
-Sigillion is not open source. The packages are on PyPI: sigillion (the engine, compiled), sigillion-capture and sigillion-format (readable source). Install, on Windows or Linux x86_64 with Python 3.10 to 3.14 and Claude Code 2.1.287 or later: `pipx install --include-deps sigillion`, then `sigillion install`. Recording is free for good; reading back needs a licence after a 30-day trial; export always works. Sigillion itself sends nothing anywhere; what it hands Claude becomes part of the Claude Code session, which Claude Code sends to Anthropic.
+Sigillion is not open source. The packages are on PyPI: sigillion (the engine, compiled), sigillion-capture and sigillion-format (readable source). The latest release is 0.1.2 (4 November 2026). Install, on Windows or Linux x86_64 or on a Mac with Apple silicon (macOS 11 or later), with Python 3.10 to 3.14 and Claude Code 2.1.287 or later or Cursor: `pipx install --include-deps sigillion`, then `sigillion install` (Claude Code) or `sigillion install cursor` (Cursor). Free for personal, non-commercial use, with no trial and no licence key; use for a company needs written permission (info@sigillion.com); export always works. Sigillion itself sends nothing anywhere; what it hands the agent becomes part of the session, which Claude Code sends to Anthropic and Cursor to the models it uses.
 
 ## Docs
 
-- [README](https://github.com/Sigillion-AI/sigillion/blob/main/README.md): what it is, the requirements, the install, the founder licences, the waitlist
+- [README](https://github.com/Sigillion-AI/sigillion/blob/main/README.md): what it is, the requirements, the install, the terms, the waitlist
 - [For agents](https://github.com/Sigillion-AI/sigillion/blob/main/AGENTS.md): the short version for an agent helping a user
-- [Privacy note](https://github.com/Sigillion-AI/sigillion/blob/main/PRIVACY.md): what is kept, where, and what reaches Anthropic through Claude Code
+- [Privacy note](https://github.com/Sigillion-AI/sigillion/blob/main/PRIVACY.md): what is kept, where and what reaches your agent's model
 - [Licence terms](https://github.com/Sigillion-AI/sigillion/blob/main/LICENSE)
 - [Security policy](https://github.com/Sigillion-AI/sigillion/blob/main/SECURITY.md)
-- [Changelog](https://github.com/Sigillion-AI/sigillion/blob/main/CHANGELOG.md)
+- [Changelog](https://github.com/Sigillion-AI/sigillion/blob/main/CHANGELOG.md): what each release changed
 
 ## Packages
 

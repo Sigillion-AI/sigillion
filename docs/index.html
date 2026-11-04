@@ -3,20 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sigillion: lossless, provable memory for Claude Code</title>
-<meta name="description" content="Sigillion keeps every Claude Code session on your own computer, word for word, compressed and sealed so that a change shows: after compaction, after the 30-day transcript deletion. Claude Code first, every agent next, then legal and finance.">
+<title>Sigillion: lossless, provable memory for Claude Code and Cursor</title>
+<meta name="description" content="Sigillion keeps every Claude Code session and every Cursor chat on your own computer, word for word, compressed and sealed so that a change shows: after compaction, after Claude Code deletes its transcripts. Claude Code and Cursor first, every agent next, then legal and finance.">
 <link rel="canonical" href="https://sigillion.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Sigillion">
-<meta property="og:title" content="Sigillion: lossless, provable memory for Claude Code">
-<meta property="og:description" content="Every Claude Code session kept on your own computer, word for word, compressed and sealed so that a change shows. Claude Code first, every agent next, then legal and finance.">
+<meta property="og:title" content="Sigillion: lossless, provable memory for Claude Code and Cursor">
+<meta property="og:description" content="Every Claude Code session and every Cursor chat kept on your own computer, word for word, compressed and sealed so that a change shows. Claude Code and Cursor first, every agent next, then legal and finance.">
 <meta property="og:url" content="https://sigillion.com/">
 <meta property="og:image" content="https://sigillion.com/sigillion-card.png">
 <meta property="og:image:width" content="1280">
 <meta property="og:image:height" content="640">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Sigillion: lossless, provable memory for Claude Code">
-<meta name="twitter:description" content="Every Claude Code session kept on your own computer, word for word, compressed and sealed so that a change shows.">
+<meta name="twitter:title" content="Sigillion: lossless, provable memory for Claude Code and Cursor">
+<meta name="twitter:description" content="Every Claude Code session and every Cursor chat kept on your own computer, word for word, compressed and sealed so that a change shows.">
 <meta name="twitter:image" content="https://sigillion.com/sigillion-card.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%2323262b'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%23d4a947'%3ES%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,11 +40,12 @@
       "@type": "SoftwareApplication",
       "name": "Sigillion",
       "url": "https://sigillion.com/",
-      "description": "Lossless, local, provable memory for AI agents. A Claude Code plugin that keeps every session on the user's own computer, word for word, compressed and sealed in hash-chained segments, with a brief at each session's start and recall of any earlier turn, each answer with a receipt.",
+      "description": "Lossless, local, provable memory for AI agents. It keeps every Claude Code session and every Cursor chat on the user's own computer, word for word, compressed and sealed in hash-chained segments, with a brief at each session's start and recall of any earlier turn, each answer with a receipt.",
       "applicationCategory": "DeveloperApplication",
-      "operatingSystem": "Windows, Linux",
-      "softwareVersion": "0.1.0",
+      "operatingSystem": "Windows, Linux, macOS",
+      "softwareVersion": "0.1.2",
       "datePublished": "2026-10-24",
+      "dateModified": "2026-11-04",
       "downloadUrl": "https://pypi.org/project/sigillion/",
       "softwareHelp": "https://github.com/Sigillion-AI/sigillion",
       "author": {"@id": "https://sigillion.com/#organization"}
@@ -105,55 +106,67 @@
   <p class="lead">Sigillion is memory for AI agents, made by Steddy Nova SRL. It keeps the whole record of what an agent
   and a person did, word for word, on your own computer; compressed, so that a model can skim weeks of work in a few
   hundred tokens and open the full text only where it needs it; sealed, so that every record can be checked to show
-  it was not altered. No telemetry: Sigillion itself sends nothing anywhere. What it hands Claude becomes part of
-  your Claude Code session, which Claude Code sends to Anthropic as it does the rest.</p>
+  it was not altered. No telemetry: Sigillion itself sends nothing anywhere. What it hands the agent becomes part of
+  your session, which Claude Code sends to Anthropic and Cursor to the models it uses, as each does with the rest.</p>
   <div class="facts">
-    <div class="fact"><b>0.1.0</b><span>on PyPI since 24 October 2026</span></div>
+    <div class="fact"><b>0.1.2</b><span>on PyPI since 4 November 2026</span></div>
     <div class="fact"><b>Local</b><span>your computer; no telemetry</span></div>
     <div class="fact"><b>Sealed</b><span>a change shows</span></div>
-    <div class="fact"><b>Free to record</b><span>reading: 30-day trial, then a licence</span></div>
+    <div class="fact"><b>Free</b><span>for personal, non-commercial use</span></div>
   </div>
 </header>
 
 <main>
   <h2>One engine, in order</h2>
   <ol>
-    <li><b>Claude Code first.</b> Today Sigillion ships as a Claude Code plugin: every session is kept after compaction
-      and after Claude Code deletes its transcripts, and Claude searches and reopens its own history while it works.
-      Claude Code is where every feature is built, measured and proved on real work. It is the first step, not the
-      whole idea.</li>
+    <li><b>Claude Code and Cursor first.</b> Today Sigillion works in Claude Code and in Cursor: every session is kept
+      after compaction and after Claude Code deletes its transcripts. Claude searches and reopens its own history while
+      it works. Both agents keep their sessions in one store on your computer: in the same project, Cursor's agent can
+      recall what Claude Code did. Claude can recall what you did in Cursor. Claude Code is where every feature is
+      built, measured and proved on real work. It is the first step, not the whole idea.</li>
     <li><b>Every AI model and agent tool next.</b> The engine does not depend on one model. The same sealed memory will
       sit under other models and the tools people already use (coding agents, agent frameworks, assistants), with an
       SDK for anyone who builds agents.</li>
     <li><b>Then the fields where the record must stand: legal and finance.</b> The same store, with a pack for each
-      field: its citations and terms, its redaction rules, and receipts that show what the model did and when, for
+      field: its citations and terms, its redaction rules and receipts that show what the model did and when, for
       work a client, a regulator or a court may ask about.</li>
   </ol>
   <p>Each step comes after the one before has proved itself with other people's numbers, not before.</p>
 
   <h2>Install</h2>
-  <p>Windows or Linux on a 64-bit Intel or AMD processor (x86_64); Python 3.10 to 3.14; Claude Code 2.1.287 or later;
-  pipx. Not yet: macOS, ARM processors, Alpine Linux. The details, Python 3.15 included, are in the
+  <p>Windows or Linux on a 64-bit Intel or AMD processor (x86_64); or a Mac with Apple silicon (M1 or later) and
+  macOS 11 or later. Python 3.10 to 3.14. Claude Code 2.1.287 or later or Cursor. pipx. Not yet: a Mac with an Intel
+  processor, ARM processors, Alpine Linux. The details, Python 3.15 and the upgrade from an earlier version are in the
   <a href="https://github.com/Sigillion-AI/sigillion#install">README</a>.</p>
 <pre><code>pipx install --include-deps sigillion
-sigillion install</code></pre>
+sigillion install
+sigillion install cursor</code></pre>
+  <p><code>sigillion install</code> is for Claude Code and <code>sigillion install cursor</code> for Cursor: use one of
+  them or both. After <code>sigillion install cursor</code>, restart Cursor once.</p>
   <p><code>sigillion status</code> shows what is kept; <code>sigillion status --actions</code> shows what Sigillion did
   for you, in four lines of counts you can share as they are; <code>sigillion --help</code> lists every command. To take
-  it out: <code>sigillion uninstall</code>, then <code>pipx uninstall sigillion</code>; what was kept stays in
-  <code>~/.sigillion</code> until you delete it.</p>
+  it out: <code>sigillion uninstall</code> (in Cursor: <code>sigillion uninstall cursor</code>), then
+  <code>pipx uninstall sigillion</code>; what was kept stays in <code>~/.sigillion</code> until you delete it.</p>
   <ul>
-    <li>Recording is free for good; reading sessions back needs a licence after a 30-day trial; exporting everything
-      kept always works, with or without one.</li>
+    <li>Free for personal, non-commercial use: every feature, with no trial and no licence key. Exporting everything
+      kept always works.</li>
     <li>How it ships: the engine compiled; the storage format and the capture (what touches your transcripts) as
       readable source. Sigillion is not open source: all rights are reserved by Steddy Nova SRL. The
       <a href="https://github.com/Sigillion-AI/sigillion/blob/main/LICENSE">terms</a>.</li>
     <li>Search by meaning is being worked on: today recall finds words, a prefix or a handle.</li>
   </ul>
 
-  <h2>Founder licences</h2>
-  <p><b>The first 500 people on the waitlist get a founder licence:</b> Pro for one person, free for life, in the order
-  people joined (spam and duplicates removed). Licences are sent within your 30-day trial, privately, never in an
-  issue: no key is needed to start.</p>
+  <h2>Free for users, not for companies</h2>
+  <p><b>Sigillion is free for personal, non-commercial use.</b> Recording, the brief at a session's start, search and
+  recall, receipts and export: all of it, with no trial and no licence key to ask for. Use for or within a company or
+  another organisation needs our written permission first. So does use for work you are paid for. Write to
+  <a href="mailto:info@sigillion.com">info@sigillion.com</a>.</p>
+  <p>Not open source and not open core: there is one Sigillion, closed and free for personal use. Already have a
+  founder licence? You will hear from us by e-mail as the project moves forward.</p>
+
+  <h2>Join the waitlist</h2>
+  <p>You hear about each release first. The first 500 people on the waitlist get a founder licence, in the order they
+  joined (spam and duplicates removed), sent privately by e-mail, never in an issue.</p>
   <p>
     <a class="cta" href="https://github.com/Sigillion-AI/sigillion/issues/new/choose">Join the waitlist</a>
     <a class="cta alt" href="https://pypi.org/project/sigillion/">Sigillion on PyPI</a>
@@ -163,9 +176,9 @@ sigillion install</code></pre>
   username: you join the same list.</p>
 
   <h2>Privacy</h2>
-  <p>Sigillion runs on your computer and sends nothing to us or to anyone: no account, no telemetry, no update check,
-  and its licence is checked offline. What it hands Claude becomes part of your Claude Code session, which Claude Code
-  sends to Anthropic as it does the rest. The whole note:
+  <p>Sigillion runs on your computer and sends nothing to us or to anyone: no account, no telemetry, no update check
+  and no licence needed. What it hands the agent becomes part of your session, which Claude Code sends to Anthropic
+  and Cursor to the models it uses, as each does with the rest. The whole note:
   <a href="https://github.com/Sigillion-AI/sigillion/blob/main/PRIVACY.md">PRIVACY.md</a>. Security reports:
   <a href="https://github.com/Sigillion-AI/sigillion/blob/main/SECURITY.md">SECURITY.md</a>, by e-mail, never in an
   issue.</p>
