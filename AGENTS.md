@@ -29,7 +29,9 @@ every Claude Code session and every Cursor window, then `pipx install --include-
 
 Sigillion is free for personal, non-commercial use: every feature, with no trial and no licence key. Use for or
 within a company needs written permission from info@sigillion.com. So does use for work the user is paid for. Export
-with `sigillion-reader` always works.
+with `sigillion-reader` always works. From a later version, encryption, tamper-proofing (signing, anchors and
+`sigillion prove`) and a third agent tool or more need a paid licence; everything else stays free. Checking
+(`sigillion verify`, `sigillion-reader`) stays free in every version.
 
 Where to send a user: the README for the install and the waitlist; CHANGELOG.md for what each release changed;
 PRIVACY.md for what is kept and where; LICENSE for the terms; SECURITY.md for a security report (by e-mail, never in

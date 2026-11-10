@@ -30,4 +30,4 @@ Out of scope: Claude Code and Cursor themselves, the models they use and your co
 
 ## Versions
 
-Fixes go into the latest release (0.1.2 today). Earlier versions are not patched: install the latest.
+Fixes go into the latest release (0.1.3 today). Earlier versions are not patched: install the latest.

@@ -43,9 +43,9 @@
       "description": "Lossless, local, provable memory for AI agents. It keeps every Claude Code session and every Cursor chat on the user's own computer, word for word, compressed and sealed in hash-chained segments, with a brief at each session's start and recall of any earlier turn, each answer with a receipt.",
       "applicationCategory": "DeveloperApplication",
       "operatingSystem": "Windows, Linux, macOS",
-      "softwareVersion": "0.1.2",
+      "softwareVersion": "0.1.3",
       "datePublished": "2026-10-24",
-      "dateModified": "2026-11-04",
+      "dateModified": "2026-11-10",
       "downloadUrl": "https://pypi.org/project/sigillion/",
       "softwareHelp": "https://github.com/Sigillion-AI/sigillion",
       "author": {"@id": "https://sigillion.com/#organization"}
@@ -109,7 +109,7 @@
   it was not altered. No telemetry: Sigillion itself sends nothing anywhere. What it hands the agent becomes part of
   your session, which Claude Code sends to Anthropic and Cursor to the models it uses, as each does with the rest.</p>
   <div class="facts">
-    <div class="fact"><b>0.1.2</b><span>on PyPI since 4 November 2026</span></div>
+    <div class="fact"><b>0.1.3</b><span>on PyPI since 9 November 2026</span></div>
     <div class="fact"><b>Local</b><span>your computer; no telemetry</span></div>
     <div class="fact"><b>Sealed</b><span>a change shows</span></div>
     <div class="fact"><b>Free</b><span>for personal, non-commercial use</span></div>
@@ -149,7 +149,8 @@ sigillion install cursor</code></pre>
   <code>pipx uninstall sigillion</code>; what was kept stays in <code>~/.sigillion</code> until you delete it.</p>
   <ul>
     <li>Free for personal, non-commercial use: every feature, with no trial and no licence key. Exporting everything
-      kept always works.</li>
+      kept always works. Encryption, tamper-proofing and a third agent tool will be paid from a later version; what
+      you use today stays free. Checking a proof stays free too.</li>
     <li>How it ships: the engine compiled; the storage format and the capture (what touches your transcripts) as
       readable source. Sigillion is not open source: all rights are reserved by Steddy Nova SRL. The
       <a href="https://github.com/Sigillion-AI/sigillion/blob/main/LICENSE">terms</a>.</li>
@@ -161,6 +162,15 @@ sigillion install cursor</code></pre>
   recall, receipts and export: all of it, with no trial and no licence key to ask for. Use for or within a company or
   another organisation needs our written permission first. So does use for work you are paid for. Write to
   <a href="mailto:info@sigillion.com">info@sigillion.com</a>.</p>
+  <p><b>What will be paid, from a later version.</b> Encryption of what Sigillion keeps; tamper-proofing: each record
+  signed on your computer and anchored so that it can be proved outside your computer, with
+  <code>sigillion prove</code> to make the proof of one turn for you to hand to someone; and a third agent tool or
+  more on the same memory. Everything you use today stays free for personal use: any two agent tools on one memory
+  (today Claude Code and Cursor), recording, the brief, search and recall, receipts and export. Checking stays free in
+  every version: <code>sigillion verify</code> and <code>sigillion-reader</code> check hashes, signatures, anchors and
+  receipts, so anyone you give a proof to can check it with no licence. <code>sigillion-reader</code> also lists and
+  extracts everything kept, with or without a licence. A version you already installed keeps the terms it came with.
+  Founder licence holders get the paid features free.</p>
   <p>Not open source and not open core: there is one Sigillion, closed and free for personal use. Already have a
   founder licence? You will hear from us by e-mail as the project moves forward.</p>
 

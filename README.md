@@ -33,8 +33,8 @@ Each step comes after the one before has proved itself with other people's numbe
 
 ## Install
 
-Sigillion 0.1.2 is on PyPI. It adds the Mac with Apple silicon. 0.1.1 added Cursor and took the trial out. What each
-release changed: [CHANGELOG.md](CHANGELOG.md).
+Sigillion 0.1.3 is on PyPI. It fixes sessions that could stop saving at a Windows path. 0.1.2 added the Mac with
+Apple silicon; 0.1.1 added Cursor and took the trial out. What each release changed: [CHANGELOG.md](CHANGELOG.md).
 
 You need:
 - Windows or Linux on a 64-bit Intel or AMD processor (x86_64); or a Mac with Apple silicon (M1 or later) and macOS 11
@@ -61,7 +61,7 @@ Then the commands:
 `sigillion install` is for Claude Code and `sigillion install cursor` for Cursor. Use one of them or both. After
 `sigillion install cursor`, restart Cursor once.
 
-To upgrade from 0.1.0 or 0.1.1: close every Claude Code session and every Cursor window first. Then run
+To upgrade from 0.1.0, 0.1.1 or 0.1.2: close every Claude Code session and every Cursor window first. Then run
 `pipx install --include-deps --force sigillion`, then `sigillion install` again (and `sigillion install cursor` if you
 use Cursor). 0.1.0 stops reading your memory back 30 days after its first use; 0.1.1 and later have no trial and read
 everything you kept.
@@ -79,6 +79,14 @@ you delete it.
 
 - **Sigillion is free for personal, non-commercial use.** Recording, the brief at a session's start, search and
   recall, receipts and export: all of it, with no trial and no licence key to ask for.
+- **What will be paid, from a later version.** Encryption of what Sigillion keeps; tamper-proofing: each record signed
+  on your computer and anchored so that it can be proved outside your computer, with `sigillion prove` to make the
+  proof of one turn for you to hand to someone; and a third agent tool or more on the same memory. Everything you use
+  today stays free for personal use: any two agent tools on one memory (today Claude Code and Cursor), recording, the
+  brief, search and recall, receipts and export. Checking stays free in every version: `sigillion verify` and
+  `sigillion-reader` check hashes, signatures, anchors and receipts, so anyone you give a proof to can check it with no
+  licence. `sigillion-reader` also lists and extracts everything kept, with or without a licence. A version you already
+  installed keeps the terms it came with. Founder licence holders get the paid features free.
 - **Not for companies.** Use for or within a company or another organisation needs our written permission first. So
   does use for work you are paid for. Write to info@sigillion.com.
 - **Not open source and not open core.** There is one Sigillion: closed and free for personal use. We keep it closed

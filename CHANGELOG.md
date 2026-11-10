@@ -3,6 +3,37 @@
 Every release is also on the [Releases page](https://github.com/Sigillion-AI/sigillion/releases), with the wheels
 and their SHA-256. Watch this repository > Custom > Releases to be told of the next one.
 
+## 0.1.3 (9 November 2026)
+
+Saving fixed for sessions holding a Windows path; the search index under a name of its own.
+
+- Fixed: in 0.1.1 and 0.1.2 a session or a Cursor chat could stop saving at a line holding a `\u` not followed by
+  four hex digits, most often a Windows path in a command, such as `C:\Users\me\AppData\Local\uv`. Nothing after that
+  line was kept. Such a backslash is now kept as written. Upgrade, then run `sigillion install` again (and
+  `sigillion install cursor` if you use Cursor): it seals what Claude Code and Cursor still keep of those sessions.
+- The search index has a name of its own (`engine/search.sqlite`), so a Sigillion 0.1.0 still running in an open
+  session can no longer rebuild it. The first start after the upgrade builds the new index once: about two minutes
+  on a store of 156 MB. Until it is built, recall answers from what is there and says so.
+- The old index files (`engine/index.sqlite`, `engine/index.lock` and `engine/windows/`) are left as they are: an
+  earlier Sigillion still running uses them. `sigillion status` names them with their size in its `old index` row.
+  Remove them when no session of an earlier Sigillion is open.
+- `sigillion status` says where a store's chain is broken: a segment missing or one that does not follow the one
+  before it. Then run `sigillion verify`.
+- The PyPI pages link to sigillion.com and to SECURITY.md.
+- Before you upgrade from 0.1.0, close every Claude Code session and every Cursor window. 0.1.0 can't be changed: an
+  open session keeps running it until the session ends.
+
+Packages: sigillion 0.1.3 (the engine, compiled), sigillion-capture 0.1.3 and sigillion-format 0.1.3 (readable
+source). Windows and Linux (x86_64), macOS (Apple silicon).
+
+```
+2e51757cd18826d75bdbc98e50707039fd89db6c895f0404e92beab4ea94cf80  sigillion-0.1.3-cp310-abi3-macosx_11_0_arm64.whl
+2ca36db7afa5efa1ddb8097047ef54650ede5bf62ff15819c4f7c46deb5bb703  sigillion-0.1.3-cp310-abi3-win_amd64.whl
+3f3459347a36092507c8c37e3fed98194de295ebf44a4e42b8f94a77d7475f10  sigillion-0.1.3-cp310-abi3-manylinux_2_28_x86_64.whl
+f8c16c8b66d18c907554913521502eebfc7c961a5e6a247425b47bfba602a3f2  sigillion_format-0.1.3-py3-none-any.whl
+226345f303da2631633638556d0280b6777c98d55857433f54fefcf87a2b8897  sigillion_capture-0.1.3-py3-none-any.whl
+```
+
 ## 0.1.2 (4 November 2026)
 
 The Mac with Apple silicon.
