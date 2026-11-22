@@ -42,6 +42,9 @@ You need:
 - Python 3.10 to 3.14. Python 3.15 needs a C compiler until zstandard, which Sigillion uses, publishes a package for
   it; with 3.14 installed beside it, `pipx install --include-deps --python 3.14 sigillion` needs none (on Linux with
   a pipx older than 1.6: `--python python3.14`).
+- On Windows, not python.org's Python 3.12.8 or 3.13.1: in August 2025 the Python Software Foundation revoked the
+  signing certificates of those two releases' Windows files, which "may fail to download, install or run"
+  (python.org); other releases are not affected. The Foundation suggests 3.13.7 or later, or 3.12.10 or later.
 - Claude Code 2.1.287 or later. To update it: `claude update`; installed with WinGet:
   `winget upgrade Anthropic.ClaudeCode`; installed with Homebrew: `brew upgrade claude-code`.
 - Or Cursor (measured on Cursor 3.27 on Windows).
